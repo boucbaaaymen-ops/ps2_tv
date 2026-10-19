@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>مشغل ألعاب PS2 للتلفاز</title>
+    
+    <!-- 1. كود فتح قفل الذاكرة في تلفاز سامسونج -->
+    <script src="coi-serviceworker.js"></script>
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 2. استدعاء محرك المحاكي بعد فتح الصلاحيات -->
+    <iframe id="ps2-screen" src="https://playjs.purei.org/" allow="autoplay; fullscreen; gamepad"></iframe>
+
+    <script>
+        // التأكد من أن قفل الذاكرة قد انفتح في متصفح التلفاز
+        if (window.crossOriginIsolated) {
+            console.log("تم فتح قفل الذاكرة بنجاح! المحاكي جاهز.");
+        } else {
+            console.log("جاري إعادة تهيئة الصلاحيات...");
+        }
+    </script>
+</body>
+</html>
