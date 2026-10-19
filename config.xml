@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/PS2Emulator" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="ps2emulatr.PS2Emulator" package="ps2emulatr" required_version="2.3"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <name>PS2 Emulator</name>
+    
+    <!-- السماح للتطبيق بالوصول إلى موقع المحاكي عبر الإنترنت -->
+    <access origin="*" subdomains="true"/>
+    
+    <!-- صلاحيات الإنترنت وقراءة الألعاب من فلاشة USB -->
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/filesystem.read"/>
+    <tizen:privilege name="http://tizen.org/privilege/mediastorage"/>
+    <tizen:privilege name="http://tizen.org/privilege/externalstorage"/>
+    
+    <tizen:setting screen-orientation="landscape" context-menu="enable" background-support="disable"/>
+</widget>
